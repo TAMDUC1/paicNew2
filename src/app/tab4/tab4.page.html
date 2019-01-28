@@ -1,9 +1,34 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab Two
+      Menu
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-item-group>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="/Datastore/uploads/bds/24.jpg">
+      </ion-avatar>
+      <ion-label>Tam Duc Pham</ion-label>
+    </ion-item>
+  </ion-item-group>
+  <ion-item-group>
+    <ion-item (click)="goTinTapDoan()" lines="none" routerDirection="forward">
+      <ion-icon name="send"></ion-icon>
+      <ion-label>Tin bat dong san</ion-label>
+    </ion-item>
+    <ion-item (click)="goTinPhapLuat()" lines="none">
+      <ion-icon name="clipboard"></ion-icon>
+      <ion-label>Tin phap luat chinh sach</ion-label>
+    </ion-item>
+    <ion-item (click)="goTinCongTrinhDauKhi()" lines="none">
+      <ion-icon name="logo-codepen"></ion-icon>
+      <ion-label >Tin Cong Trinh Dau Khi</ion-label>
+    </ion-item>
+
+
+  </ion-item-group>
+</ion-content>

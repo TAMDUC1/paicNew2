@@ -1,9 +1,27 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab Two
+      Trang tin tức
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="loadData(true, $event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+  <div id="card-list">
+    <ion-list >
+      <ion-card *ngFor="let book of books">
+        <ion-card-header>
+          {{book.title}}
+        </ion-card-header>
+        <ion-card-content>
+          <div [innerHTML]="book.information">
 
-<ion-content></ion-content>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </div>
+</ion-content>

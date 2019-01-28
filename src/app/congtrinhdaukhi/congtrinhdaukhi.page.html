@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>congtrinhdaukhi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-refresher slot="fixed" (ionRefresh)="loadData(true, $event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+  <div id="card-list">
+    <ion-list >
+      <ion-card *ngFor="let news of newsctdk">
+        <ion-card-header>
+          {{news.title}}
+        </ion-card-header>
+        <ion-card-content>
+          <div [innerHTML]="news.information">
+
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </div>
+</ion-content>

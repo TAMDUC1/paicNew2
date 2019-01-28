@@ -1,9 +1,35 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab Three
+      Báo Cáo
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-item-group>
+    <form (ngSubmit)="sendPostRequest()">
+      <ion-item>
+        <ion-label >Hạng mục 1</ion-label>
+        <ion-input [(ngModel)]="data1.tieuchi1" [ngModelOptions]="{standalone: true}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label >Hạng mục 2</ion-label>
+        <ion-input [(ngModel)]="data1.tieuchi2" [ngModelOptions]="{standalone: true}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Đánh giá chất Lượng tổng thể</ion-label>
+        <ion-select value="" ok-text="ok" cancel-text="huy" [(ngModel)]="data1.tieuchi3" [ngModelOptions]="{standalone: true}">
+          <ion-select-option value="tot">Tốt</ion-select-option>
+          <ion-select-option value="trung binh">Trung Bình</ion-select-option>
+          <ion-select-option value="kem">Kém</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-button type="submit" expand="full">Send</ion-button>
+    </form>
+    {{message}}
+  </ion-item-group>
+</ion-content>
+

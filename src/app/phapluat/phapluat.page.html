@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>phapluat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-refresher slot="fixed" (ionRefresh)="loadData(true, $event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+  <div id="card-list">
+    <ion-list *ngIf="newsphapluat.length > 0">
+      <ion-card *ngFor="let news of newsphapluat">
+        <ion-card-header>
+          {{news.title}}
+        </ion-card-header>
+        <ion-card-content>
+          <div [innerHTML]="news.information">
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </div>
+</ion-content>
