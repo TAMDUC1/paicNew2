@@ -10,6 +10,7 @@ import {Platform} from '@ionic/angular';
 })
 export class PhapluatPage implements OnInit {
     public newsphapluat =[];
+    // inject cac service de dung
     constructor(private router: Router, private News: NewsService, private plt: Platform) { }
 
     ngOnInit() {

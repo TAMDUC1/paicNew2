@@ -1,7 +1,8 @@
 {
   "name": "paicNew2",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }

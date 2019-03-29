@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../services/news.service';
-import {Router} from '@angular/router';
-import {Platform} from '@ionic/angular';
+import { Router } from '@angular/router';
+import { Platform } from '@ionic/angular';
 
 @Component({
     selector: 'app-congtrinhdaukhi',

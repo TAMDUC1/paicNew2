@@ -157,6 +157,7 @@ export class Tab1Page implements OnInit {
             newFileName = n + ".mp4";
         return newFileName;
     }
+
     copyFileToLocalDir(namePath, currentName, newFileName) {
         this.file.copyFile(namePath, currentName, this.file.dataDirectory, newFileName).then(success => {
             this.updateStoredImages(newFileName);
@@ -244,9 +245,9 @@ export class Tab1Page implements OnInit {
             )
             .subscribe(res => {
                 if (res['success']) {
-                    this.presentToast('File upload complete.')
+                    this.presentToast('File upload thành công.')
                 } else {
-                    this.presentToast('File upload failed.')
+                    this.presentToast('File upload thất bại.')
                 }
             });
     }

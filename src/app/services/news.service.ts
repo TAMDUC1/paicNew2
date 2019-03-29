@@ -26,7 +26,6 @@ export class NewsService {
     private url:string ='https://fakerestapi.azurewebsites.net/api/Books';
     private url2:string ='https://thunghiemcsdl.paic.pvn.vn/api/CMS_News';
     private url3:string ='https://thunghiemcsdl.paic.pvn.vn/api/CMS_News/c424a9af-af63-4015-aeb4-000158a09903';
-
     private tinbatdongsan : string ='https://thunghiemcsdl.paic.pvn.vn/api/CMS_News?categoryId=5a57b602-b4cb-41dd-a6c9-1b10d50c947f';
     private tinphapluat : string ='https://thunghiemcsdl.paic.pvn.vn/api/CMS_News?categoryId=69b31aea-0394-4b9f-a3d1-f22602cafd76';
     private tincongtrinhdaukhi : string ='https://thunghiemcsdl.paic.pvn.vn/api/CMS_News?categoryId=4840a664-fab1-4db2-8bae-49adead5b903';
@@ -107,6 +106,7 @@ export class NewsService {
         }
 
     }
+
     private handleError(error: HttpErrorResponse) {
         if (error.error instanceof ErrorEvent) {
             // A client-side or network error occurred. Handle it accordingly.
@@ -125,6 +125,7 @@ export class NewsService {
     private setLocalData(key, data) {
         this.storage.set(`${API_STORAGE_KEY}-${key}`, data);
     }
+
     private getLocalData(key) {
         return this.storage.get(`${API_STORAGE_KEY}-${key}`);
     }
